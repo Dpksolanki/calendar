@@ -20,6 +20,7 @@ model User {
   updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
+  availability  Availability[]
 }
 
 model Account {
@@ -56,4 +57,28 @@ model VerificationToken {
   expires    DateTime
 
   @@id([identifier, token])
+}
+
+model Availability {
+  id String @id @default(uuid())
+
+  day      Day
+  fromTime String // e.g., '08:00'
+  tillTime String // e.g., '18:00'
+  isActive Boolean @default(true) // Toggle availability for the day
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String?
+}
+
+enum Day {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+  Sunday
 }
