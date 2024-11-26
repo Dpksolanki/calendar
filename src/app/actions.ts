@@ -74,10 +74,11 @@
 
 "use server"
 
+import { parseWithZod } from "@conform-to/zod";
 // import { ZodError } from "zod";
 import prisma from "./lib/db";
 import { requireUser } from "./lib/hook";
-import { OnboardingSchemaValidation } from "./lib/zodSchemas";
+import { OnboardingSchemaValidation, settingSchema } from "./lib/zodSchemas";
 import { redirect } from "next/navigation";
 
 // Convert FormData to a plain object
@@ -127,4 +128,25 @@ export async function OnboardingAction(prevstate: unknown, formData: FormData) {
     return redirect("/onboarding/grant-id");
 }
 
+export async function SettingsAction(prevstate: unknown, formData: FormData){
+    const session = await requireUser();
 
+    const submission = parseWithZod(formData, {
+        schema: settingSchema,
+    })
+
+    if(submission.status !== "success"){
+        return submission.reply();
+    }
+
+     await prisma.user.update({
+        where:{
+            id: session.user?.id,
+        },
+        data:{
+            name: submission.value.fullName,
+            image:submission.value.profileImage,
+        },
+    });
+    return redirect("/dashboard")
+}
