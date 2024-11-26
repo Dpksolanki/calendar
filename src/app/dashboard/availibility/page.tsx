@@ -38,6 +38,7 @@ async function getData(userId: string) {
 }
 
 const AvailabilityPage = async () => {
+  console.log("hii sir")
   const session = await requireUser();
   const data = await getData(session.user?.id as string);
 
