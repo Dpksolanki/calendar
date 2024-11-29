@@ -1,4 +1,4 @@
-import { SettingsFrom } from "@/app/components/settingsFrom";
+import { SettingsFrom } from "@/app/components/dashboard/settingsFrom";
 import prisma from "@/app/lib/db";
 import { requireUser } from "@/app/lib/hook";
 import { notFound } from "next/navigation";
