@@ -51,7 +51,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                             <Link href="/" className="flex item-center gap-2">
                                 <Image src={Logo} alt="Logo" className="size-8" />
                                 <p className="text-xl font-bold">
-                                    Deepak<span className="text-primary">Solanki</span>
+                                Avail<span className="text-primary">Mate</span>
                                     {/* Logo */}
                                 </p>
                             </Link>
@@ -93,7 +93,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                                 <DropdownMenuSeparator>
                                     <DropdownMenuItem asChild>
-                                        <Link href="/dashboard/settings">Settings</Link>
+                                        <Link href="/dashboard/setting">Settings</Link>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem asChild>
                                         <form className="w-full" action={async () =>
@@ -101,7 +101,7 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                                                 "use server"
                                                 await signOut()
                                             }
-                                        }>
+                                        }>  
                                             <button className="w-full text-left">
                                                 log Out
                                             </button>

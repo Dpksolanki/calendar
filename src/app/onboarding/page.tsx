@@ -29,7 +29,7 @@ export default function OnboardingRoute() {
             <Card>
                 <CardHeader>
                     <CardTitle>
-                        Welcome To Deepak<span className="text-primary">Solanki</span>
+                        Welcome To Avail<span className="text-primary">Mate</span>
                     </CardTitle>
                     <CardDescription>
                         We need the following Information to set up you

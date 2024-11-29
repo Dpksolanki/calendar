@@ -2,6 +2,8 @@ import Image from "next/image";
 import NylasLogo from "../../../../public/nylas-logo.png";
 import NextjsLogo from "../../../../public/nextjs-logo.svg";
 import vercelLogo from "../../../../public/vercel.svg";
+import supaBase from "../../../../public/supabase.svg"
+import typeScript from "../../../../public/typescript-logo.png"
 
 export function Logos() {
   return (
@@ -26,12 +28,12 @@ export function Logos() {
           className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 dark:invert"
         />
         <Image
-          src={NylasLogo}
+          src={supaBase}
           alt="Logo"
           className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 dark:invert"
         />
         <Image
-          src={NextjsLogo}
+          src={typeScript}
           alt="Logo"
           className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 dark:invert"
         />
