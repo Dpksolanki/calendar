@@ -9,7 +9,7 @@ import { OnboardingAction } from "../actions";
 import { useForm } from '@conform-to/react'
 import { parseWithZod } from "@conform-to/zod";
 import { onboardingSchema } from "../lib/zodSchemas";
-import { SubmitButton } from "../components/submitButton";
+import { SubmitButton } from "../components/SubmitButton";
 
 export default function OnboardingRoute() {
     const [lastResult, action] = useFormState(OnboardingAction, undefined);

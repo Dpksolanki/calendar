@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import Logo from "../../../public/logo.png"
-import DashboardLink from "../components/dashboardLink";
+import DashboardLink from "../components/dashboard/dashboardLink";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { ThemeToggle } from "../components/themeToggle";
+import { ThemeToggle } from "../components/dashboard/themeToggle";
 import { DropdownMenu, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { signOut } from "../lib/auth";
 import { DropdownMenuContent } from "@radix-ui/react-dropdown-menu";

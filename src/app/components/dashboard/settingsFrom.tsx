@@ -3,18 +3,18 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { SubmitButton } from "./submitButton"
 // import { useForm } from "@conform-to/react"
 import { useFormState } from "react-dom"
-import { SettingsAction } from "../actions"
 import { useForm } from "@conform-to/react"
 import { parseWithZod } from "@conform-to/zod"
-import { settingSchema } from "../lib/zodSchemas"
 import { useState } from "react"
-import { Heading1, X } from "lucide-react"
+import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { UploadDropzone } from "../lib/uploadthing"
 import { toast } from "sonner"
+import { settingSchema } from "@/app/lib/zodSchemas"
+import { SettingsAction } from "@/app/actions"
+import { UploadDropzone } from "@/app/lib/uploadthing"
+import { SubmitButton } from "../SubmitButton"
 
 interface iAppProps{
     fullName: string;

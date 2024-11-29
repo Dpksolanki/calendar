@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "./components/themeProvidere";
+import { ThemeProvider } from "./components/dashboard/themeProvidere";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server"; 
 import { ourFileRouter } from "./api/uploadthing/core";

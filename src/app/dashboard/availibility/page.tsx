@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { requireUser } from "@/app/lib/hook";
 import { updateAvailabilityAction } from "@/app/actions";
-import { SubmitButton } from "@/app/components/submitButton";
+import { SubmitButton } from "@/app/components/SubmitButton";
 
 async function getData(userId: string) {
   const data = await prisma.availability.findMany({
